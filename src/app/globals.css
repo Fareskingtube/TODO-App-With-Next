@@ -96,6 +96,31 @@
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
+
+	--linearPrimarySecondary: linear-gradient(
+		oklch(60.37% 0.167 37.13),
+		oklch(37.52% 0.106 36.74)
+	);
+	--linearPrimaryAccent: linear-gradient(
+		oklch(60.37% 0.167 37.13),
+		oklch(50.22% 0.161 35.94)
+	);
+	--linearSecondaryAccent: linear-gradient(
+		oklch(37.52% 0.106 36.74),
+		oklch(50.22% 0.161 35.94)
+	);
+	--radialPrimarySecondary: radial-gradient(
+		oklch(60.37% 0.167 37.13),
+		oklch(37.52% 0.106 36.74)
+	);
+	--radialPrimaryAccent: radial-gradient(
+		oklch(60.37% 0.167 37.13),
+		oklch(50.22% 0.161 35.94)
+	);
+	--radialSecondaryAccent: radial-gradient(
+		oklch(37.52% 0.106 36.74),
+		oklch(50.22% 0.161 35.94)
+	);
 }
 
 :root.dark,
@@ -275,7 +300,7 @@
 	--color-destructive: var(--destructive);
 	--color-accent-foreground: var(--accent-foreground);
 	--color-accent: var(--accent);
-	--color-muted-foreground: var(--muted-foreground);
+	--color-muted-foreground: var(--text-200);
 	--color-muted: var(--muted);
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-secondary: var(--secondary);
@@ -298,7 +323,7 @@
 
 @layer base {
 	body {
-		@apply antialiased bg-background text-foreground;
+		@apply antialiased bg-background text-foreground font-(family-name:--font-inter);
 	}
 	* {
 		@apply border-border outline-ring/50;
