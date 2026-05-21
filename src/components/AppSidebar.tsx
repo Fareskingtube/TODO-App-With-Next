@@ -18,6 +18,7 @@ import { Home, NotebookPen, Plus } from "lucide-react";
 import ModeToggle from "./ui/ModeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import NoteFolder from "./NoteFolder";
 
 export function AppSidebar() {
 	const currentPath = usePathname();
@@ -41,7 +42,7 @@ export function AppSidebar() {
 					<SidebarMenuButton
 						isActive={currentPath === "/"}
 						asChild
-						className="hover:bg-text-300 hover:[&>svg]:text-text-300 data-[active=true]:bg-transparent active:[&>svg]:text-primary-500 data-[active=true]:[&>svg]:text-primary-500 bg-text-100 active:bg-linear-to-r data-[active=true]:bg-linear-to-r from-primary-500 to-accent-500 bg-clip-text"
+						className="sidebar-item hover:bg-text-300 "
 					>
 						<Link href="/">
 							<Home />
@@ -51,17 +52,24 @@ export function AppSidebar() {
 				</SidebarGroup>
 				<SidebarSeparator className="ml-0" />
 				<SidebarGroup>
-					<SidebarGroupLabel className="select-none text-xs">
+					<SidebarGroupLabel className="p-0 select-none text-xs">
 						TODOs
-						<SidebarGroupAction title="Add TODO">
+						<SidebarGroupAction title="Add TODO" className="hover:bg-transparent hover:[&>svg]:text-text-400 active:bg-transparent active:[&>svg]:opacity-75 [&>svg]:text-text-300">
 							<Plus />
-							<span className="sr-only">Add TODO</span>
+							<span className="sr-only">Create TODO Folder</span>
 						</SidebarGroupAction>
 					</SidebarGroupLabel>
+					<SidebarSeparator className="ml-0" />
 					<SidebarGroupContent>
-						<SidebarMenuButton className="group-data-[state=expanded]:hidden not-md:hidden">
+						<SidebarMenu>
+							<SidebarMenuItem>
+								<NoteFolder />
+							</SidebarMenuItem>
+						</SidebarMenu>
+						<SidebarSeparator className="ml-0 group-data-[state=expanded]:hidden" />
+						<SidebarMenuButton className="group-data-[state=expanded]:hidden not-md:hidden hover:bg-transparent hover:[&>svg]:text-text-400 active:bg-transparent active:[&>svg]:opacity-75 [&>svg]:text-text-300">
 							<Plus />
-							<span className="sr-only">Add TODO</span>
+							<span className="sr-only">Create TODO Folder</span>
 						</SidebarMenuButton>
 					</SidebarGroupContent>
 				</SidebarGroup>

@@ -332,3 +332,11 @@
 		@apply font-sans;
 	}
 }
+
+
+@layer components {
+	.sidebar-item {
+		@apply hover:bg-text-300 hover:[&>svg]:text-text-300 data-[active=true]:bg-transparent active:[&>svg]:text-primary-500 data-[active=true]:[&>svg]:text-primary-500 bg-text-100 active:bg-linear-to-r data-[active=true]:bg-linear-to-r from-primary-500 to-accent-500 bg-clip-text
+		[&>span]:text-transparent
+	}
+}
