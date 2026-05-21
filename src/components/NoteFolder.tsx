@@ -26,7 +26,7 @@ function NoteFolder() {
 				<div className="flex items-center gap-2">
 					<FolderIcon className="w-4" />
 					<span className="group-data-[state=collapsed]:hidden">
-						Note Folder 1
+						TODO Folder 1
 					</span>
 				</div>
 				<ChevronUpIcon className="w-5 transition-transform group-data-[state=open]:rotate-180" />
@@ -36,31 +36,31 @@ function NoteFolder() {
 					<SidebarMenuButton
 						asChild
 						className="hover:bg-text-300 p-0 m-0 h-fit py-1"
-						isActive={currentPath === "/note1"}
+						isActive={currentPath === "/todo1"}
 					>
-						<Link href="/note1" className="flex gap-1 items-center sidebar-item">
+						<Link href="/todo1" className="flex gap-1 items-center sidebar-item">
 							<NotebookPen />
-							<span className="font-bold">Note 1</span>
+							<span className="font-bold">TODO 1</span>
 						</Link>
 					</SidebarMenuButton>
 					<SidebarMenuButton
 						asChild
 						className="hover:bg-text-300 p-0 m-0 h-fit py-1"
-						isActive={currentPath === "/note2"}
+						isActive={currentPath === "/todo2"}
 					>
-						<Link href="/note2" className="flex gap-1 items-center sidebar-item">
+						<Link href="/todo2" className="flex gap-1 items-center sidebar-item">
 							<NotebookPen />
-							<span className="font-bold">Note 2</span>
+							<span className="font-bold">TODO 2</span>
 						</Link>
 					</SidebarMenuButton>
 					<SidebarMenuButton
 						asChild
 						className="hover:bg-text-300 p-0 m-0 h-fit py-1"
-						isActive={currentPath === "/note3"}
+						isActive={currentPath === "/todo3"}
 					>
-						<Link href="note3" className="flex gap-1 items-center sidebar-item">
+						<Link href="todo3" className="flex gap-1 items-center sidebar-item">
 							<NotebookPen />
-							<span className="font-bold">Note 3</span>
+							<span className="font-bold">TODO 3</span>
 						</Link>
 					</SidebarMenuButton>
 
